@@ -6,7 +6,6 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -16,7 +15,6 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <Pane style="-fx-background-color: #6699CC;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.casinoroyale.Controller.GamesControllers.SlotsController">
    <children>
@@ -36,29 +34,17 @@
                           <children>
                               <StackPane prefHeight="100.0" prefWidth="100.0">
                                   <children>
-                                      <ImageView fx:id="imageBlock1" fitHeight="160.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
-                                          <image>
-                                              <Image url="@../../Assets/Slots/icons/6.png" />
-                                          </image>
-                              </ImageView>
+                                      <ImageView fx:id="imageBlock1" fitHeight="160.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
                                   </children>
                               </StackPane>
                               <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
                                   <children>
-                                      <ImageView fx:id="imageBlock2" fitHeight="160.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
-                                          <image>
-                                              <Image url="@../../Assets/Slots/icons/6.png" />
-                                          </image>
-                              </ImageView>
+                                      <ImageView fx:id="imageBlock2" fitHeight="160.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
                                   </children>
                         </StackPane>
                               <StackPane prefHeight="336.0" prefWidth="214.0" GridPane.columnIndex="2">
                                   <children>
-                                      <ImageView fx:id="imageBlock3" fitHeight="160.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
-                                          <image>
-                                              <Image url="@../../Assets/Slots/icons/6.png" />
-                                          </image>
-                              </ImageView>
+                                      <ImageView fx:id="imageBlock3" fitHeight="160.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true" />
                                   </children>
                         </StackPane>
                           </children>
