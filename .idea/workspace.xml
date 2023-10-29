@@ -7,7 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="42436b1b-9b1f-4ddc-8c1d-3a6bc1aed41d" name="Changes" comment="Second push test." />
+    <list default="true" id="42436b1b-9b1f-4ddc-8c1d-3a6bc1aed41d" name="Changes" comment="Second push test.">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_5_2023_12_33_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_5_2023_12_33_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/casinoroyale/Controller/GamesControllers/RouletteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/casinoroyale/Controller/GamesControllers/RouletteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/casinoroyale/Model/DataModels/GameModels/RouletteModel/Roulette.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/casinoroyale/Model/DataModels/GameModels/RouletteModel/Roulette.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/casinoroyale/View/Games/Roulette.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/casinoroyale/View/Games/Roulette.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -29,28 +36,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "furkanxny"
-  }
-}]]></component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="dd4482ec-7f82-47b0-9a27-c553c1dca750" />
-        <option name="url" value="https://github.com/LukeStrazz/CasinoRoyale.git" />
-      </UrlAndAccount>
-    </option>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
+  &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2V3JBzr9p1MndDlA79NZE6z8x46" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -65,13 +55,18 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;CSR-003&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/luke-angelostrazzera/Farmingdale23/ComputerEngineering/CasinoRoyale/src/main/resources/app.casinoroyale/View/Games&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;CSR-002&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/explo/OneDrive/Desktop/Horse Racing Pics&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -83,14 +78,14 @@
       <recent name="$PROJECT_DIR$/src/main/java/app.casinoroyale/Controller/GamesControllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\explo\IdeaProjects\CasinoRoyale\src\main\resources\app\Assets\HorseRacing\images" />
+      <recent name="$PROJECT_DIR$/src/main/resources/app.casinoroyale" />
+      <recent name="$PROJECT_DIR$/src/main/java/app/casinoroyale" />
       <recent name="$PROJECT_DIR$/src/main" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="app.casinoroyale.Controller.GamesControllers" />
     </key>
   </component>
   <component name="RunManager">
@@ -110,57 +105,13 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694058698661</updated>
+      <workItem from="1697118192009" duration="53000" />
+      <workItem from="1697118260680" duration="3076000" />
     </task>
-    <task id="LOCAL-00001" summary="Slots.fxml and SlotsController.java has been added">
-      <option name="closed" value="true" />
-      <created>1697581181997</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1697581181997</updated>
-    </task>
-    <task id="LOCAL-00002" summary="unnecessary icons file has been deleted">
-      <option name="closed" value="true" />
-      <created>1697641398695</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1697641398695</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Info button has been added to display Winning Information on a pop up Alert Window.">
-      <option name="closed" value="true" />
-      <created>1698160684816</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1698160684816</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Info has been added, css style background color has been added.">
-      <option name="closed" value="true" />
-      <created>1698164510543</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1698164510543</updated>
-    </task>
-    <task id="LOCAL-00005" summary="new color">
-      <option name="closed" value="true" />
-      <created>1698199002907</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1698199002907</updated>
-    </task>
-    <task id="LOCAL-00006" summary="last push before first merge">
-      <option name="closed" value="true" />
-      <created>1698533257901</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1698533257901</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ID_ORDER">
@@ -173,18 +124,18 @@
       </list>
     </option>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Slots.fxml and SlotsController.java has been added" />
-    <MESSAGE value="unnecessary icons file has been deleted" />
-    <MESSAGE value="Info button has been added to display Winning Information on a pop up Alert Window." />
-    <MESSAGE value="Info has been added, css style background color has been added." />
-    <MESSAGE value="new color" />
-    <MESSAGE value="last push before first merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="last push before first merge" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
