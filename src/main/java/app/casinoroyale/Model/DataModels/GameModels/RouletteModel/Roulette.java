@@ -19,12 +19,12 @@ public class Roulette  {
 
     private final ObservableList<Bet> bets = FXCollections.observableArrayList();
 
-    private final RouletteWheel rw;
+    private final RouletteWheel rouletteWheel;
     
     private int winnings;
 
     private Roulette() {
-        rw = new RouletteWheel();
+        rouletteWheel = new RouletteWheel();
 
     }
 
@@ -40,7 +40,7 @@ public class Roulette  {
     public int checkBet() {
         int ballNumber = -1;
         winnings = 0;
-        Ball ball = rw.spinWheel();
+        Ball ball = rouletteWheel.spinWheel();
 
         
         
@@ -53,7 +53,7 @@ public class Roulette  {
 
                
                 winnings += winning;
-                System.out.println("amigo");
+                System.out.println(winnings);
             } else {
                
                 
@@ -66,11 +66,11 @@ public class Roulette  {
     }
 
     public int getIndexInWheel() {
-        return rw.getBall().getIndexInWheel();
+        return rouletteWheel.getBall().getIndexInWheel();
     }
 
     public int getNumber() {
-        return rw.getBall().getNumber();
+        return rouletteWheel.getBall().getNumber();
     }
 
     public int getWinning(int bet, int ratio) {

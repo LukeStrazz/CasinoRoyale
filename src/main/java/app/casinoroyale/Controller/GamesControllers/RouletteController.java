@@ -61,7 +61,7 @@ public class RouletteController implements Initializable{
     @FXML private Label lbl0, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10, lbl11, lbl12, lbl13, lbl14, lbl15, lbl16, lbl17, lbl18, lbl19, lbl20, lbl21, lbl22, lbl23, lbl24, lbl25, lbl26, lbl27, lbl28, lbl29, lbl30, lbl31, lbl32, lbl33, lbl34, lbl35, lbl36;
     @FXML private Label lbl1to18, lblEven, lblOdd, lbl19to36, lbl1st12, lbl2nd12, lbl3rd12, lbl2to1Row1, lbl2to1Row2, lbl2to1Row3, lblRed, lblBlack;
     @FXML private Label lblBalance, lblBetAmount, lblPlay, lblRandomNumber, lblWinnings;
-    @FXML private ImageView chip1, chip5, chip10, chip50, chip100, imgViewPlay, imgViewRouletteWheel, imgViewBall, imgViewRouletteWheelMid;
+    @FXML private ImageView chip0, chip1, chip5, chip10, chip50, chip100, imgViewPlay, imgViewRouletteWheel, imgViewBall, imgViewRouletteWheelMid;
     @FXML private Pane draggablePane, numberPane, paneStreet1, paneStreet2, paneStreet3, paneStreet4, paneStreet5, paneStreet6, paneStreet7, paneStreet8, paneStreet9, paneStreet10, paneStreet11, paneStreet12;
     @FXML private AnchorPane mainPane;
     @FXML private Ellipse ellipseCover;
@@ -72,7 +72,7 @@ public class RouletteController implements Initializable{
 
     private ImageView selectedImageView;
     @FXML
-    private ImageView imgViewTutorial;
+    private ImageView imgViewTutorial, goBack, minimize, nextImg;
 
     private double x, y;
     private double mainSceneX, mainSceneY;
@@ -107,12 +107,12 @@ public class RouletteController implements Initializable{
         lblChipHover.setVisible(false);
 
         // Adds the initial chip.
-        //addChip();
+       addChip();
 
-        // Gets the x and y coordinates of the chip's origin.
-        //Bounds chip = chips.get(0).getBoundsInLocal();
-        //chipXOrigin = chip.getMinX();
-        //chipYOrigin = chip.getMinY();
+       // Gets the x and y coordinates of the chip's origin.
+       Bounds chip = chips.get(0).getBoundsInLocal();
+       chipXOrigin = chip.getMinX();
+       chipYOrigin = chip.getMinY();
 
         this.stage = CSRApplication.getStage();
 
@@ -188,11 +188,11 @@ public class RouletteController implements Initializable{
      */
     private void addChip() {
         ImageView chip = new ImageView();
-        chip.setImage(new Image("@../../Assets/Roulette/images/jetons/jeton1.png"));
+        chip.setImage(chip0.getImage());
         mainPane.getChildren().add(chip);
 
-        chip.setX(1155);
-        chip.setY(588);
+        chip.setX(775);
+        chip.setY(615);
         chip.setFitWidth(44);
         chip.setFitHeight(44);
 
@@ -552,23 +552,23 @@ public class RouletteController implements Initializable{
     @FXML
     private void highlightSquareButton(MouseEvent event) {
         selectedImageView = ((ImageView) event.getSource());
-        selectedImageView.setImage(new Image("images/btn2_pressed.png"));
+        selectedImageView.setImage(imgViewPlay.getImage());
     }
 
     @FXML
     private void unHighlightSquareButton(MouseEvent event) {
-        selectedImageView.setImage(new Image("images/btn2.png"));
+        selectedImageView.setImage(imgViewPlay.getImage());
     }
 
     @FXML
     private void highlightRoundButton(MouseEvent event) {
         selectedImageView = ((ImageView) event.getSource());
-        selectedImageView.setImage(new Image("images/btn_toolbar_highlighted.png"));
+        selectedImageView.setImage(nextImg.getImage());
     }
 
     @FXML
     private void unHighlightRoundButton(MouseEvent event) {
-        selectedImageView.setImage(new Image("images/btn_toolbar.png"));
+        selectedImageView.setImage(minimize.getImage());
     }
 
 
@@ -592,7 +592,7 @@ public class RouletteController implements Initializable{
         index++;
         try {
             imgViewTutorial.setVisible(true);
-            imgViewTutorial.setImage(new Image("images/roulette/tutorial/" + index + ".png"));
+            imgViewTutorial.setImage(new Image("../../../images/roulette/tutorial/" + index + ".png"));
         } catch(Exception ex) {
             index = 0;
             imgViewTutorial.setVisible(false);
