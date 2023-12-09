@@ -48,8 +48,8 @@
 
 <VBox prefHeight="754.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.casinoroyale.Controller.GamesControllers.HorseController">
     <children>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="576.0" prefWidth="1075.0" VBox.vgrow="ALWAYS">
-            <ImageView fx:id="background" fitHeight="754.0" fitWidth="1238.0" layoutX="-8.0">
+        <AnchorPane fx:id="horseRacingScene" maxHeight="-1.0" maxWidth="-1.0" prefHeight="576.0" prefWidth="1075.0" VBox.vgrow="ALWAYS">
+            <ImageView fx:id="background" fitHeight="${horseRacingScene.height}" fitWidth="${horseRacingScene.width}" layoutX="-8.0" preserveRatio="true">
                <image>
                   <Image url="@../../../Assets/HorseRacing/images/background.png" />
                </image>
@@ -67,7 +67,7 @@
                 </Button>
             <ComboBox fx:id="horseSelect" layoutX="14.0" layoutY="33.0" prefHeight="34.0" prefWidth="178.0" promptText="Select a Horse" visibleRowCount="5" />
             <Label fx:id="resultLabel" layoutX="362.0" layoutY="188.0" prefHeight="74.0" prefWidth="433.0" />
-            <Pane fx:id="racePane" layoutX="3.0" layoutY="392.0" prefHeight="315.0" prefWidth="902.0">
+            <Pane fx:id="racePane" layoutX="3.0" layoutY="392.0" prefHeight="315.0" prefWidth="1126.0">
                <children>
                   <ImageView fx:id="horse1" fitHeight="77.0" fitWidth="93.0" layoutX="47.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5">
                      <image>
@@ -114,15 +114,11 @@
 
                             </items>
                         </Menu>
-                        <Menu mnemonicParsing="false" text="Sports">
-                            <items>
-                                <MenuItem mnemonicParsing="false" text="FootBall" />
-                            </items>
-                        </Menu>
+
                         <Menu mnemonicParsing="false" text="Financial">
                             <items>
                                 <MenuItem mnemonicParsing="false" onAction="#launchBank" text="Bank" />
-                                <MenuItem mnemonicParsing="false" text="P/L" />
+
                             </items>
                         </Menu>
                     </menus>

@@ -11,8 +11,8 @@
             <Image url="@../../../Assets/Bank/bankbg.PNG" />
          </image>
       </ImageView>
-      <Button fx:id="deposit" layoutX="66.0" layoutY="98.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="146.0" text="Deposit" />
-      <Button fx:id="withdraw" layoutX="66.0" layoutY="179.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="146.0" text="Withdraw" />
+      <Button fx:id="deposit" layoutX="66.0" layoutY="98.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="146.0" onAction="#showDepositDialog" text="Deposit" />
+      <Button fx:id="withdraw" layoutX="66.0" layoutY="179.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="146.0" onAction="#showWithdrawDialog" text="Withdraw" />
       <MenuBar prefHeight="28.0" prefWidth="1102.0">
          <menus>
             <Menu mnemonicParsing="false" onAction="#homeDash" text="Casino Royale">
