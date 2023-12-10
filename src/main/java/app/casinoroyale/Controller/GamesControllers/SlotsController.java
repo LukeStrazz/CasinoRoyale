@@ -108,13 +108,13 @@ homeController.launchBank(event);
 
     public void setUpTimeline2(){
         Timeline timeline1 = new Timeline(new KeyFrame(Duration.millis(5000), e -> initializeJackpotImages()));
-        timeline1.setCycleCount(Timeline.INDEFINITE);
+        timeline1.setCycleCount(150);
         timeline1.play();
     }
 
     public void setUpTimeline(){
         Timeline tLine = new Timeline(new KeyFrame(Duration.millis(400  ), e -> initializeSlotsW()));
-        tLine.setCycleCount(Timeline.INDEFINITE);
+        tLine.setCycleCount(10);
         tLine.play();
     }
 
