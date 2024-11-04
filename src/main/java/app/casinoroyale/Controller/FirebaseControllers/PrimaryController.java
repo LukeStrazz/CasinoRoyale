@@ -5,6 +5,7 @@ import app.casinoroyale.Controller.HomeController;
 import app.casinoroyale.Controller.LoginController;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.*;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -36,7 +37,6 @@ public class PrimaryController implements regex{
     private RadioButton radioButton;
     @FXML
     private Button writeButton;
-    private Stage stage;
     boolean isSelected;
     boolean isExist;
     boolean isRegistered = false;
@@ -45,7 +45,7 @@ public class PrimaryController implements regex{
     private final ObservableList<Person> listOfUsers = FXCollections.observableArrayList();
     private Person person;
     private Firestore firestore;
-    private static String ID;
+    private String ID;
     public void setID(String ID){
         this.ID = ID;
     }
@@ -53,12 +53,12 @@ public class PrimaryController implements regex{
     public ObservableList<Person> getListOfUsers() {
         return listOfUsers;
     }
+    private final FirestoreContext contxtFirebase = new FirestoreContext();
 
     public PrimaryController(){
         //LG = new LoginController();
         this.homeController = new HomeController();
-        this.stage = new Stage();
-        firestore = CSRApplication.fstore;
+        firestore = contxtFirebase.firebase();
     }
 
     void initialize() {
@@ -77,7 +77,7 @@ public class PrimaryController implements regex{
     }
 
     public boolean updateBalance(double newBalance) {
-        DocumentReference docRef = CSRApplication.fstore.collection("Persons")
+        DocumentReference docRef = firestore.collection("Persons")
                 .document(ID);
         Map<String, Object> updates = new HashMap<>();
         updates.put("Balance", newBalance);
@@ -95,7 +95,7 @@ public class PrimaryController implements regex{
 
     public boolean readFirebase() {
         key = false;
-        ApiFuture<QuerySnapshot> future =  CSRApplication.fstore.collection("Persons").get();
+        ApiFuture<QuerySnapshot> future =  firestore.collection("Persons").get();
         List<QueryDocumentSnapshot> documents;
         try
         {
@@ -131,6 +131,7 @@ public class PrimaryController implements regex{
         return key;
     }
 
+    @SuppressFBWarnings({"DM_BOXED_PRIMITIVE_FOR_PARSING", "UC_USELESS_OBJECT"})
     public void addData() {
         readFirebase();
         isSelected = radioButton.isSelected();
@@ -143,14 +144,13 @@ public class PrimaryController implements regex{
         if(nameTextField.getText().matches(regexUserName) && Double.valueOf(ageTextField.getText()) >= 18 &&
                 emailTextField.getText().matches(regexEmail) && isSelected && !passwordTextField.getText().isEmpty() &&
                 !startingBalanceTextField.getText().isEmpty() && isExist) {
-            DocumentReference docRef = CSRApplication.fstore.collection("Persons").document(UUID.randomUUID().toString());
+            DocumentReference docRef = firestore.collection("Persons").document(UUID.randomUUID().toString());
             Map<String, Object> data = new HashMap<>();
             data.put("Name", nameTextField.getText());
             data.put("Age", Integer.parseInt(ageTextField.getText()));
             data.put("email", emailTextField.getText());
             data.put("Password", passwordTextField.getText());
             data.put("Balance", Double.parseDouble(startingBalanceTextField.getText()));
-            ApiFuture<WriteResult> result = docRef.set(data);
             System.out.println("User registration is successful");
             isRegistered = true;
         }

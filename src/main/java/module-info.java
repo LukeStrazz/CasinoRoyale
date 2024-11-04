@@ -11,7 +11,7 @@ module app.casinoroyale {
     requires com.google.auth;
     requires java.logging;
     requires google.cloud.core;
-
+    requires com.github.spotbugs.annotations;
 
 
     // Exporting and opening the necessary packages

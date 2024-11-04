@@ -26,7 +26,7 @@ public class Game {
         this.deck = new Deck();
         this.dealer = new Dealer();
         this.chips = new ArrayList<>();
-        this.player = player;
+        this.player = player.getInstance();
         this.gameStatus = GameStatus.CONTINUE;
 
 
@@ -150,7 +150,7 @@ public class Game {
     }
 
     public Dealer getDealer() {
-        return dealer;
+        return new Dealer();
     }
 
     public Deck getDeck() {
@@ -158,6 +158,6 @@ public class Game {
     }
 
     public ArrayList<Chip> getChips() {
-        return chips;
+        return new ArrayList<>(chips);
     }
 }

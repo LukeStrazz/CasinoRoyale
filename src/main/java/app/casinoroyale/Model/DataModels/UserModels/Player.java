@@ -17,6 +17,7 @@ import app.casinoroyale.Model.DataModels.GameModels.BlackJackModel.role.Cardhold
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import app.casinoroyale.Controller.FirebaseControllers.Person;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 
 public class Player extends Cardholder {
 
@@ -27,10 +28,12 @@ public class Player extends Cardholder {
     public String name;
     private double accountBalance;
 
+    @SuppressFBWarnings("SING_SINGLETON_HAS_NONPRIVATE_CONSTRUCTOR")
     public Player() {
         super();
     }
 
+    @SuppressFBWarnings({"SING_SINGLETON_GETTER_NOT_SYNCHRONIZED", "MS_EXPOSE_REP"})
     public static Player getInstance() {
         if (instance == null) {
             instance = new Player();
@@ -58,6 +61,7 @@ public class Player extends Cardholder {
     }
 
 
+    @SuppressFBWarnings("PA_PUBLIC_PRIMITIVE_ATTRIBUTE")
     public String getName(){return name;}
     public void setName(String name) {
         this.name = name;

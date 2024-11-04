@@ -1,5 +1,6 @@
 package app.casinoroyale.Controller.GamesControllers.BlackJackController;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -94,10 +95,11 @@ public class PlayroomGameController  {
      * @param player player to been shown on the UI as well as who plays the game
      * @param game   the game which player has started
      */
+    @SuppressFBWarnings("EI_EXPOSE_REP2")
     public void loadContents(Player player, Game game) {
         // Initialize the game object
         this.game = game; // or obtain reference through some other means
-        this.player = player;
+        this.player = player.getInstance();
 
         // Other initialization code
 

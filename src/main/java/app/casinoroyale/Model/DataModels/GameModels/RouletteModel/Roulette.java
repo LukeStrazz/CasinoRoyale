@@ -10,6 +10,7 @@
 package app.casinoroyale.Model.DataModels.GameModels.RouletteModel;
 
 import app.casinoroyale.Model.DataModels.UserModels.Player;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
@@ -31,6 +32,7 @@ public class Roulette  {
 
     
 
+    @SuppressFBWarnings({"SING_SINGLETON_GETTER_NOT_SYNCHRONIZED", "MS_EXPOSE_REP"})
     public static Roulette getInstance() {
         if(instance == null) {
             instance = new Roulette();

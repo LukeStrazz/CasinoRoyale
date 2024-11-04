@@ -21,19 +21,8 @@ import java.io.IOException;
 import java.net.URL;
 
 public class CSRApplication extends Application {
-    public static Scene scene;
-    public static Stage stage;
-
-    public static Firestore fstore;
-
-    private final FirestoreContext contxtFirebase = new FirestoreContext();
-
-
     @Override
     public void start(Stage primaryStage) throws IOException {
-
-        fstore = contxtFirebase.firebase();
-
 
         URL resource = getClass().getResource("/app/casinoroyale/View/Dashboards/LoginPage.fxml");
 

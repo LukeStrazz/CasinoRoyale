@@ -5,6 +5,7 @@ import app.casinoroyale.Controller.HomeController;
 import app.casinoroyale.Model.DataModels.GameModels.RouletteModel.Bet;
 import app.casinoroyale.Model.DataModels.GameModels.RouletteModel.Roulette;
 import app.casinoroyale.Model.DataModels.GameModels.SlotsModel.SlotGameView;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -102,10 +103,6 @@ public class RouletteController implements Initializable{
     private double mainSceneX, mainSceneY;
     private double chipXOrigin, chipYOrigin;
     private int index;
-
-
-    private final boolean infoOpened = false;
-
     private int lastAddedAmount = 0;
 
     private final ObservableList<Label> numbers = FXCollections.observableArrayList();
@@ -121,6 +118,7 @@ public class RouletteController implements Initializable{
     /**
      * Initializes the controller class.
      */
+    @SuppressFBWarnings("URF_UNREAD_FIELD")
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         this.primaryController = new PrimaryController();
@@ -407,6 +405,7 @@ public class RouletteController implements Initializable{
      * @param range
      * @return
      */
+    @SuppressFBWarnings("SF_SWITCH_NO_DEFAULT")
     public ObservableList<Integer> getNumbersByRange(String range) {
         int min = 0;
         int max = 0;

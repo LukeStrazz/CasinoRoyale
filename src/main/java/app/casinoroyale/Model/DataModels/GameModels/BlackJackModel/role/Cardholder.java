@@ -53,6 +53,7 @@ public class Cardholder {
     }
 
     public ArrayList<Card> getHand() {
-        return hand;
+        return new ArrayList<>(hand);
     }
+
 }

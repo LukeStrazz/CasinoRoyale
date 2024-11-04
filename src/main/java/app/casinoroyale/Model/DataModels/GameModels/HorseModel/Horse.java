@@ -5,7 +5,7 @@ import javafx.animation.Timeline;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 public class Horse {
     private String name;
@@ -13,7 +13,7 @@ public class Horse {
     private String odds;
     private double speed;
     private Timeline moveHorseAnimation;  // The new field to store each horse's animation
-    private static final Random RANDOM = new Random();
+    private static final SecureRandom RANDOM = new SecureRandom();
 
     public Horse(String name, ImageView imageView) {
         this.name = name;

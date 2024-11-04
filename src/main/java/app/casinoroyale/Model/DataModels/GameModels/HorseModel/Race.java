@@ -1,5 +1,6 @@
 package app.casinoroyale.Model.DataModels.GameModels.HorseModel;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import javafx.scene.layout.Pane;
 
 import java.util.List;
@@ -10,6 +11,7 @@ public class Race {
     private double finishLine;
     private Horse winner;
 
+    @SuppressFBWarnings({"URF_UNREAD_FIELD", "EI_EXPOSE_REP2"})
     public Race(Pane racePane, List<Horse> horses) {
         this.racePane = racePane;
         this.horses = horses;
@@ -41,7 +43,7 @@ public class Race {
     }
 
     public Horse getWinner() {
-        return winner;
+        return new Horse(winner.getName(), winner.getImageView());
     }
 
     // Resets the position of all horses to start a new race

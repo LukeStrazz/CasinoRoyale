@@ -1,6 +1,7 @@
 package app.casinoroyale.Controller;
 
 import app.casinoroyale.CSRApplication;
+import app.casinoroyale.Controller.FirebaseControllers.FirestoreContext;
 import app.casinoroyale.Controller.FirebaseControllers.Person;
 import app.casinoroyale.Controller.FirebaseControllers.PrimaryController;
 import app.casinoroyale.Controller.GamesControllers.SlotsController;
@@ -9,6 +10,7 @@ import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.Firestore;
 import com.google.cloud.firestore.QueryDocumentSnapshot;
 import com.google.cloud.firestore.QuerySnapshot;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -29,13 +31,15 @@ public class LoginController {
     private app.casinoroyale.Controller.HomeController homeController;
     private app.casinoroyale.Controller.FirebaseControllers.PrimaryController primaryController;
     private Firestore firestore;
+    private final FirestoreContext contxtFirebase = new FirestoreContext();
 
     private Stage stage;
+    @SuppressFBWarnings("URF_UNREAD_FIELD")
     public LoginController(){
         this.homeController = new HomeController();
         this.stage = new Stage();
         this.primaryController = new PrimaryController();
-        firestore = CSRApplication.fstore;
+        firestore = contxtFirebase.firebase();
 
     }
     public boolean loginUser(String email, String password) {
@@ -61,7 +65,6 @@ public class LoginController {
 
     private void initializePlayerWithPersonData(QueryDocumentSnapshot document) {
         String name = document.getString("Name");
-        String email = document.getString("Email");
         double balance = document.getDouble("Balance");
         Player player = Player.getInstance();
 

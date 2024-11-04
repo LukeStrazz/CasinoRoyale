@@ -1,5 +1,6 @@
 package app.casinoroyale.Controller.GamesControllers;
 import app.casinoroyale.CSRApplication;
+import app.casinoroyale.Controller.FirebaseControllers.FirestoreContext;
 import app.casinoroyale.Controller.FirebaseControllers.PrimaryController;
 import app.casinoroyale.Controller.HomeController;
 import app.casinoroyale.Model.DataModels.UserModels.Player;
@@ -10,6 +11,7 @@ import app.casinoroyale.Model.DataModels.GameModels.SlotsModel.*;
 import app.casinoroyale.Model.DataModels.GameModels.SlotsModel.SlotGame;
 import app.casinoroyale.Model.DataModels.UserModels.Player;
 import com.google.cloud.firestore.Firestore;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -39,7 +41,7 @@ public class SlotsController {
     ArrayList<String> resultArrList = new ArrayList<>();
     Bet bet1 = new Bet(-4);
     private int executionCount = 0;
-    private final int totalExecutions = 5;
+    private static final int totalExecutions = 5;
     private int jackpotImagesCounter = 1;
     private int jackpotSignCounter = 1;
     private Timeline timeline;
@@ -47,14 +49,13 @@ public class SlotsController {
     private Image[] flashImages = new Image[2];
     private app.casinoroyale.Controller.FirebaseControllers.PrimaryController primaryController;
     private app.casinoroyale.Controller.HomeController homeController;
-    private Firestore firestore;
     private Stage stage;
 
+    @SuppressFBWarnings("URF_UNREAD_FIELD")
     public SlotsController(){
         this.homeController = new HomeController();
         this.stage = new Stage();
         this.primaryController = new PrimaryController();
-        firestore = CSRApplication.fstore;
     }
 
 
@@ -80,6 +81,7 @@ homeController.launchBank(event);
         Player player = Player.getInstance();
         primaryController.updateBalance(player.getAccountBalance());
     }
+    @SuppressFBWarnings("DLS_DEAD_LOCAL_STORE")
     @FXML
     public void initialize() {
         Player player = Player.getInstance();
@@ -159,6 +161,7 @@ homeController.launchBank(event);
         jackpotImagesCounter++;
     }
 
+    @edu.umd.cs.findbugs.annotations.SuppressFBWarnings("PATH_TRAVERSAL_IN")
     private void initializeImages() {
         int i;
         for (i = 0; i < 14; ++i) {

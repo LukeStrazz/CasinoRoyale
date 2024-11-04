@@ -1,22 +1,25 @@
 package app.casinoroyale.Model.DataModels.GameModels.SlotsModel;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.util.ArrayList;
-import java.util.Random;
+import java.security.SecureRandom;
 
 public class SlotGameView {
     static SlotGame slotGame = new SlotGame();
 
+    private static SecureRandom RANDOM = new SecureRandom();
 
+    @SuppressFBWarnings("DMI_RANDOM_USED_ONLY_ONCE")
     private static int randomize() {
         int max = 13;
         int min = 0;
-        new Random();
-        int a = min + (int) (Math.random() * (double) (max - min + 1));
+        RANDOM = new SecureRandom();
+        int a = min + (int) (RANDOM.nextInt() * (double) (max - min + 1));
         return a;
     }
 

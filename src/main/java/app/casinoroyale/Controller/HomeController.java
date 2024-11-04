@@ -2,6 +2,7 @@ package app.casinoroyale.Controller;
 
 import app.casinoroyale.Controller.GamesControllers.BlackJackController.PlayroomBetController;
 import app.casinoroyale.Model.DataModels.UserModels.Player;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,6 +29,7 @@ public class HomeController {
     private ImageView casionoImageView;
     private final Player player;
     private static Stage primaryStage;
+    @SuppressFBWarnings("URF_UNREAD_FIELD")
     private Stage stage = new Stage();
 
     @FXML

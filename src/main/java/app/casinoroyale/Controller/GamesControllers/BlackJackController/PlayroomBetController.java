@@ -5,6 +5,7 @@ import app.casinoroyale.Controller.HomeController;
 import app.casinoroyale.Model.DataModels.GameModels.BlackJackModel.game.Chip;
 import app.casinoroyale.Model.DataModels.GameModels.BlackJackModel.game.Game;
 import app.casinoroyale.Model.DataModels.UserModels.Player;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -85,8 +86,9 @@ public class PlayroomBetController {
         DecimalFormat formatter = new DecimalFormat("\t$###,###");
         txtBalance.setText(formatter.format(balance));
     }
+    @SuppressFBWarnings("RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT")
     public void loadContents(Player player) {
-        this.player = player;
+        this.player = player.getInstance();
 
         // Load the player's current balance
         player.getAccountBalance();  // You need to update this line based on how you load the balance
@@ -185,6 +187,7 @@ public class PlayroomBetController {
      * Deal the bet (chips) and start the game.
      * Switch to game scene and update balance text in UI.
      */
+    @SuppressFBWarnings("RV_RETURN_VALUE_IGNORED_NO_SIDE_EFFECT")
     @FXML
     protected void onDealButtonClick() {
         if (game.getCurrentBetValue() > player.getAccountBalance()) {
